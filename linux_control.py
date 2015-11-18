@@ -36,10 +36,10 @@ def linux_controller(command_string):
     return a
 
 
-def file_list(pattern=""):
+def file_list(directory, pattern=""):
     '''returns a list of filenames based on a pattern'''
     onlyfiles = [
-        f for f in listdir(getcwd())
+        f for f in listdir(directory)
         if isfile(join(getcwd(), f))
         if f.find(pattern) > 0]
     return onlyfiles
