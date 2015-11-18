@@ -40,8 +40,8 @@ def file_list(directory, pattern=""):
     '''returns a list of filenames based on a pattern'''
     onlyfiles = [
         f for f in listdir(directory)
-        if isfile(join(getcwd(), f))
-        if f.find(pattern) > 0]
+        if isfile(join(directory, f))
+        if f.find(pattern) > -1]
     return onlyfiles
 
 
